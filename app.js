@@ -99,6 +99,11 @@ app.use('/messages', messageRouter);
 app.use('/cv', cvManagmentRouter);
 
 
+app.get("/", function (req, res) {
+  res.send(JSON.stringify({ Hello: "World"}));
+ });
+
+
 
 // Static files
 app.use(express.static('public'));
